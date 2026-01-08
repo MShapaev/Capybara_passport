@@ -1,0 +1,692 @@
+{
+  "Берсерки": {
+    "Гражданин": [],
+    "Дипломат": [],
+    "Генерал": [],
+    "Премьер-министр": [],
+    "Президент": [],
+    "Заключенный": []
+  },
+  "Скебобы": {
+    "Гражданин": [
+      {
+        "filename": "bird_citizen_1.jpg",
+        "url": "./portraits/bird/citizen/bird_citizen_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "bird_citizen_2.jpg",
+        "url": "./portraits/bird/citizen/bird_citizen_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "bird_citizen_3.jpg",
+        "url": "./portraits/bird/citizen/bird_citizen_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "bird_citizen_4.jpg",
+        "url": "./portraits/bird/citizen/bird_citizen_4.jpg",
+        "number": 4
+      }
+    ],
+    "Дипломат": [
+      {
+        "filename": "bird_diplomat_1.jpg",
+        "url": "./portraits/bird/diplomat/bird_diplomat_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "bird_diplomat_2.jpg",
+        "url": "./portraits/bird/diplomat/bird_diplomat_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "bird_diplomat_3.jpg",
+        "url": "./portraits/bird/diplomat/bird_diplomat_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "bird_diplomat_4.jpg",
+        "url": "./portraits/bird/diplomat/bird_diplomat_4.jpg",
+        "number": 4
+      }
+    ],
+    "Генерал": [
+      {
+        "filename": "bird_general_1.jpg",
+        "url": "./portraits/bird/general/bird_general_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "bird_general_2.jpg",
+        "url": "./portraits/bird/general/bird_general_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "bird_general_3.jpg",
+        "url": "./portraits/bird/general/bird_general_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "bird_general_4.jpg",
+        "url": "./portraits/bird/general/bird_general_4.jpg",
+        "number": 4
+      }
+    ],
+    "Премьер-министр": [
+      {
+        "filename": "bird_pm_1.jpg",
+        "url": "./portraits/bird/pm/bird_pm_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "bird_pm_3.jpg",
+        "url": "./portraits/bird/pm/bird_pm_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "bird_pm_4.jpg",
+        "url": "./portraits/bird/pm/bird_pm_4.jpg",
+        "number": 4
+      }
+    ],
+    "Президент": [
+      {
+        "filename": "bird_president_1.jpg",
+        "url": "./portraits/bird/president/bird_president_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "bird_president_2.jpg",
+        "url": "./portraits/bird/president/bird_president_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "bird_president_3.jpg",
+        "url": "./portraits/bird/president/bird_president_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "bird_president_4.jpg",
+        "url": "./portraits/bird/president/bird_president_4.jpg",
+        "number": 4
+      }
+    ],
+    "Заключенный": [
+      {
+        "filename": "bird_prisoner_1.jpg",
+        "url": "./portraits/bird/prisoner/bird_prisoner_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "bird_prisoner_2.jpg",
+        "url": "./portraits/bird/prisoner/bird_prisoner_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "bird_prisoner_3.jpg",
+        "url": "./portraits/bird/prisoner/bird_prisoner_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "bird_prisoner_4.jpg",
+        "url": "./portraits/bird/prisoner/bird_prisoner_4.jpg",
+        "number": 4
+      }
+    ]
+  },
+  "Капибары": {
+    "Гражданин": [
+      {
+        "filename": "capybara_citizen_1.jpg",
+        "url": "./portraits/capybara/citizen/capybara_citizen_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "capybara_citizen_2.jpg",
+        "url": "./portraits/capybara/citizen/capybara_citizen_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "capybara_citizen_3.jpg",
+        "url": "./portraits/capybara/citizen/capybara_citizen_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "capybara_citizen_4.jpg",
+        "url": "./portraits/capybara/citizen/capybara_citizen_4.jpg",
+        "number": 4
+      }
+    ],
+    "Дипломат": [
+      {
+        "filename": "capybara_diplomat_1.jpg",
+        "url": "./portraits/capybara/diplomat/capybara_diplomat_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "capybara_diplomat_2.jpg",
+        "url": "./portraits/capybara/diplomat/capybara_diplomat_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "capybara_diplomat_4.jpg",
+        "url": "./portraits/capybara/diplomat/capybara_diplomat_4.jpg",
+        "number": 4
+      }
+    ],
+    "Генерал": [
+      {
+        "filename": "capybara_general_1.jpg",
+        "url": "./portraits/capybara/general/capybara_general_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "capybara_general_2.jpg",
+        "url": "./portraits/capybara/general/capybara_general_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "capybara_general_3.jpg",
+        "url": "./portraits/capybara/general/capybara_general_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "capybara_general_4.jpg",
+        "url": "./portraits/capybara/general/capybara_general_4.jpg",
+        "number": 4
+      }
+    ],
+    "Премьер-министр": [
+      {
+        "filename": "capybara_pm_1.jpg",
+        "url": "./portraits/capybara/pm/capybara_pm_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "capybara_pm_2.jpg",
+        "url": "./portraits/capybara/pm/capybara_pm_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "capybara_pm_3.jpg",
+        "url": "./portraits/capybara/pm/capybara_pm_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "capybara_pm_4.jpg",
+        "url": "./portraits/capybara/pm/capybara_pm_4.jpg",
+        "number": 4
+      }
+    ],
+    "Президент": [
+      {
+        "filename": "capybara_president_1.jpg",
+        "url": "./portraits/capybara/president/capybara_president_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "capybara_president_2.jpg",
+        "url": "./portraits/capybara/president/capybara_president_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "capybara_president_3.jpg",
+        "url": "./portraits/capybara/president/capybara_president_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "capybara_president_4.jpg",
+        "url": "./portraits/capybara/president/capybara_president_4.jpg",
+        "number": 4
+      }
+    ],
+    "Заключенный": [
+      {
+        "filename": "capybara_prisoner_1.jpg",
+        "url": "./portraits/capybara/prisoner/capybara_prisoner_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "capybara_prisoner_2.jpg",
+        "url": "./portraits/capybara/prisoner/capybara_prisoner_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "capybara_prisoner_3.jpg",
+        "url": "./portraits/capybara/prisoner/capybara_prisoner_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "capybara_prisoner_4.jpg",
+        "url": "./portraits/capybara/prisoner/capybara_prisoner_4.jpg",
+        "number": 4
+      }
+    ]
+  },
+  "Грибовики": {
+    "Гражданин": [
+      {
+        "filename": "mushroom_citizen_1.jpg",
+        "url": "./portraits/mushroom/citizen/mushroom_citizen_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "mushroom_citizen_2.jpg",
+        "url": "./portraits/mushroom/citizen/mushroom_citizen_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "mushroom_citizen_3.jpg",
+        "url": "./portraits/mushroom/citizen/mushroom_citizen_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "mushroom_citizen_4.jpg",
+        "url": "./portraits/mushroom/citizen/mushroom_citizen_4.jpg",
+        "number": 4
+      }
+    ],
+    "Дипломат": [
+      {
+        "filename": "mushroom_diplomat_1.jpg",
+        "url": "./portraits/mushroom/diplomat/mushroom_diplomat_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "mushroom_diplomat_2.jpg",
+        "url": "./portraits/mushroom/diplomat/mushroom_diplomat_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "mushroom_diplomat_3.jpg",
+        "url": "./portraits/mushroom/diplomat/mushroom_diplomat_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "mushroom_diplomat_4.jpg",
+        "url": "./portraits/mushroom/diplomat/mushroom_diplomat_4.jpg",
+        "number": 4
+      }
+    ],
+    "Генерал": [
+      {
+        "filename": "mushroom_general_1.jpg",
+        "url": "./portraits/mushroom/general/mushroom_general_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "mushroom_general_2.jpg",
+        "url": "./portraits/mushroom/general/mushroom_general_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "mushroom_general_3.jpg",
+        "url": "./portraits/mushroom/general/mushroom_general_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "mushroom_general_4.jpg",
+        "url": "./portraits/mushroom/general/mushroom_general_4.jpg",
+        "number": 4
+      }
+    ],
+    "Премьер-министр": [
+      {
+        "filename": "mushroom_pm_1.jpg",
+        "url": "./portraits/mushroom/pm/mushroom_pm_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "mushroom_pm_2.jpg",
+        "url": "./portraits/mushroom/pm/mushroom_pm_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "mushroom_pm_3.jpg",
+        "url": "./portraits/mushroom/pm/mushroom_pm_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "mushroom_pm_4.jpg",
+        "url": "./portraits/mushroom/pm/mushroom_pm_4.jpg",
+        "number": 4
+      }
+    ],
+    "Президент": [
+      {
+        "filename": "mushroom_president_1.jpg",
+        "url": "./portraits/mushroom/president/mushroom_president_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "mushroom_president_2.jpg",
+        "url": "./portraits/mushroom/president/mushroom_president_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "mushroom_president_3.jpg",
+        "url": "./portraits/mushroom/president/mushroom_president_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "mushroom_president_4.jpg",
+        "url": "./portraits/mushroom/president/mushroom_president_4.jpg",
+        "number": 4
+      }
+    ],
+    "Заключенный": [
+      {
+        "filename": "mushroom_prisoner_1.jpg",
+        "url": "./portraits/mushroom/prisoner/mushroom_prisoner_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "mushroom_prisoner_2.jpg",
+        "url": "./portraits/mushroom/prisoner/mushroom_prisoner_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "mushroom_prisoner_3.jpg",
+        "url": "./portraits/mushroom/prisoner/mushroom_prisoner_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "mushroom_prisoner_4.jpg",
+        "url": "./portraits/mushroom/prisoner/mushroom_prisoner_4.jpg",
+        "number": 4
+      }
+    ]
+  },
+  "Нейтралы": {
+    "Гражданин": [],
+    "Дипломат": [],
+    "Генерал": [],
+    "Премьер-министр": [],
+    "Президент": [],
+    "Заключенный": []
+  },
+  "Мопсы": {
+    "Гражданин": [],
+    "Дипломат": [],
+    "Генерал": [],
+    "Премьер-министр": [],
+    "Президент": [
+      {
+        "filename": "pug_president_1.jpg",
+        "url": "./portraits/pug/president/pug_president_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "pug_president_2.jpg",
+        "url": "./portraits/pug/president/pug_president_2.jpg",
+        "number": 2
+      }
+    ],
+    "Заключенный": []
+  },
+  "Тапки": {
+    "Гражданин": [
+      {
+        "filename": "slipper_citizen_1.jpg",
+        "url": "./portraits/slipper/citizen/slipper_citizen_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "slipper_citizen_2.jpg",
+        "url": "./portraits/slipper/citizen/slipper_citizen_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "slipper_citizen_3.jpg",
+        "url": "./portraits/slipper/citizen/slipper_citizen_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "slipper_citizen_4.jpg",
+        "url": "./portraits/slipper/citizen/slipper_citizen_4.jpg",
+        "number": 4
+      }
+    ],
+    "Дипломат": [
+      {
+        "filename": "slipper_diplomat_1.jpg",
+        "url": "./portraits/slipper/diplomat/slipper_diplomat_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "slipper_diplomat_2.jpg",
+        "url": "./portraits/slipper/diplomat/slipper_diplomat_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "slipper_diplomat_3.jpg",
+        "url": "./portraits/slipper/diplomat/slipper_diplomat_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "slipper_diplomat_4.jpg",
+        "url": "./portraits/slipper/diplomat/slipper_diplomat_4.jpg",
+        "number": 4
+      }
+    ],
+    "Генерал": [
+      {
+        "filename": "slipper_general_1.jpg",
+        "url": "./portraits/slipper/general/slipper_general_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "slipper_general_2.jpg",
+        "url": "./portraits/slipper/general/slipper_general_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "slipper_general_3.jpg",
+        "url": "./portraits/slipper/general/slipper_general_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "slipper_general_4.jpg",
+        "url": "./portraits/slipper/general/slipper_general_4.jpg",
+        "number": 4
+      }
+    ],
+    "Премьер-министр": [
+      {
+        "filename": "slipper_pm_1.jpg",
+        "url": "./portraits/slipper/pm/slipper_pm_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "slipper_pm_2.jpg",
+        "url": "./portraits/slipper/pm/slipper_pm_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "slipper_pm_3.jpg",
+        "url": "./portraits/slipper/pm/slipper_pm_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "slipper_pm_4.jpg",
+        "url": "./portraits/slipper/pm/slipper_pm_4.jpg",
+        "number": 4
+      }
+    ],
+    "Президент": [
+      {
+        "filename": "slipper_president_1.jpg",
+        "url": "./portraits/slipper/president/slipper_president_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "slipper_president_2.jpg",
+        "url": "./portraits/slipper/president/slipper_president_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "slipper_president_3.jpg",
+        "url": "./portraits/slipper/president/slipper_president_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "slipper_president_4.jpg",
+        "url": "./portraits/slipper/president/slipper_president_4.jpg",
+        "number": 4
+      }
+    ],
+    "Заключенный": [
+      {
+        "filename": "slipper_prisoner_1.jpg",
+        "url": "./portraits/slipper/prisoner/slipper_prisoner_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "slipper_prisoner_2.jpg",
+        "url": "./portraits/slipper/prisoner/slipper_prisoner_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "slipper_prisoner_3.jpg",
+        "url": "./portraits/slipper/prisoner/slipper_prisoner_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "slipper_prisoner_4.jpg",
+        "url": "./portraits/slipper/prisoner/slipper_prisoner_4.jpg",
+        "number": 4
+      }
+    ]
+  },
+  "Смайлы": {
+    "Гражданин": [
+      {
+        "filename": "smile_citizen_1.jpg",
+        "url": "./portraits/smile/citizen/smile_citizen_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "smile_citizen_2.jpg",
+        "url": "./portraits/smile/citizen/smile_citizen_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "smile_citizen_3.jpg",
+        "url": "./portraits/smile/citizen/smile_citizen_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "smile_citizen_4.jpg",
+        "url": "./portraits/smile/citizen/smile_citizen_4.jpg",
+        "number": 4
+      }
+    ],
+    "Дипломат": [
+      {
+        "filename": "smile_diplomat_1.jpg",
+        "url": "./portraits/smile/diplomat/smile_diplomat_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "smile_diplomat_2.jpg",
+        "url": "./portraits/smile/diplomat/smile_diplomat_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "smile_diplomat_3.jpg",
+        "url": "./portraits/smile/diplomat/smile_diplomat_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "smile_diplomat_4.jpg",
+        "url": "./portraits/smile/diplomat/smile_diplomat_4.jpg",
+        "number": 4
+      }
+    ],
+    "Генерал": [
+      {
+        "filename": "smile_general_1.jpg",
+        "url": "./portraits/smile/general/smile_general_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "smile_general_2.jpg",
+        "url": "./portraits/smile/general/smile_general_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "smile_general_3.jpg",
+        "url": "./portraits/smile/general/smile_general_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "smile_general_4.jpg",
+        "url": "./portraits/smile/general/smile_general_4.jpg",
+        "number": 4
+      }
+    ],
+    "Премьер-министр": [
+      {
+        "filename": "smile_pm_1.jpg",
+        "url": "./portraits/smile/pm/smile_pm_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "smile_pm_2.jpg",
+        "url": "./portraits/smile/pm/smile_pm_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "smile_pm_3.jpg",
+        "url": "./portraits/smile/pm/smile_pm_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "smile_pm_4.jpg",
+        "url": "./portraits/smile/pm/smile_pm_4.jpg",
+        "number": 4
+      }
+    ],
+    "Президент": [
+      {
+        "filename": "smile_president_2.jpg",
+        "url": "./portraits/smile/president/smile_president_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "smile_president_3.jpg",
+        "url": "./portraits/smile/president/smile_president_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "smile_president_4.jpg",
+        "url": "./portraits/smile/president/smile_president_4.jpg",
+        "number": 4
+      }
+    ],
+    "Заключенный": [
+      {
+        "filename": "smile_prisoner_1.jpg",
+        "url": "./portraits/smile/prisoner/smile_prisoner_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "smile_prisoner_2.jpg",
+        "url": "./portraits/smile/prisoner/smile_prisoner_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "smile_prisoner_3.jpg",
+        "url": "./portraits/smile/prisoner/smile_prisoner_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "smile_prisoner_4.jpg",
+        "url": "./portraits/smile/prisoner/smile_prisoner_4.jpg",
+        "number": 4
+      }
+    ]
+  }
+}
