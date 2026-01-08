@@ -15,17 +15,17 @@
         .hand-drawn-title { font-family: 'Amatic SC', cursive; }
         @media print { .no-print { display: none !important; } }
         .passport-cover { background-color: #991b1b; border: 1px solid #7f1d1d; }
-        .portrait-img { 
-            width: 100%; 
-            height: 100%; 
-            object-fit: contain;
+        .portrait-img {
+            width: 30mm;
+            height: 40mm;
+            object-fit: cover;
             object-position: center;
+            display: block;
         }
         .placeholder-img {
             background: linear-gradient(45deg, #f3f4f6 25%, #e5e7eb 25%, #e5e7eb 50%, #f3f4f6 50%, #f3f4f6 75%, #e5e7eb 75%);
             background-size: 20px 20px;
         }
-        /* Стили для правильного отображения выкройки */
         #capture-area {
             transform: rotate(180deg);
             transform-origin: center;
@@ -35,7 +35,6 @@
                 transform: none;
             }
         }
-        /* Для превью на экране внутренний лист переворачиваем обратно */
         .preview-inner {
             transform: rotate(180deg);
         }
@@ -110,7 +109,7 @@
                     <div style="width: 210mm; height: 297mm; padding: 15mm; position: relative; background: white; color: black;">
                         <div class="inline-block border border-dashed border-slate-200 p-2 md:p-4">
                             <div class="grid grid-cols-2" style="width: 140mm;">
-                                <!-- ВНУТРЕННЯЯ СТРАНИЦА (вверх ногами для выкройки) -->
+                                <!-- ВНУТРЕННЯЯ СТРАНИЦА -->
                                 <div class="border-4 border-black bg-white p-5 flex flex-col relative preview-inner" style="width: 70mm; height: 100mm;">
                                     <div class="flex justify-between items-start gap-3 h-full">
                                         <div class="flex-1 flex flex-col justify-start space-y-3">
@@ -163,38 +162,18 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // Конфигурация
             const PORTRAITS_JSON_URL = './portraits/portraits.json';
 
-            // Маппинг русских названий на папки
-            const RELIGION_MAP = {
-                'Капибары': 'capybara',
-                'Грибовики': 'mushroom',
-                'Скебобы': 'bird',
-                'Тапки': 'slipper',
-                'Нейтралы': 'neutral',
-                'Смайлы': 'smile',
-                'Мопсы': 'pug',
-                'Берсерки': 'berserker'
-            };
-
-            const RANK_MAP = {
-                'Президент': 'president',
-                'Премьер-министр': 'pm',
-                'Генерал': 'general',
-                'Дипломат': 'diplomat',
-                'Гражданин': 'citizen',
-                'Заключенный': 'prisoner'
-            };
-
-            // Состояние приложения
             const state = {
                 portraitsCatalog: {},
-                customPhoto: null,
+                customPhotoProcessed: null,
                 lastRandomIndexes: {}
             };
 
-            // DOM элементы
+            // Целевые размеры в пикселях (высокое разрешение для PDF)
+            const TARGET_WIDTH_PX = 600;   // ~30 мм при 500 DPI
+            const TARGET_HEIGHT_PX = 800;  // ~40 мм при 500 DPI
+
             const inputName = document.getElementById('input-name');
             const selectReligion = document.getElementById('select-religion');
             const selectRank = document.getElementById('select-rank');
@@ -208,9 +187,7 @@
             const inputPhotoUpload = document.getElementById('input-photo-upload');
             const btnDownload = document.getElementById('btn-download');
 
-            // Инициализация
             async function init() {
-                // Настройка событий
                 inputName.addEventListener('input', updateName);
                 selectReligion.addEventListener('change', handleCategoryChange);
                 selectRank.addEventListener('change', handleCategoryChange);
@@ -219,14 +196,10 @@
                 inputPhotoUpload.addEventListener('change', handlePhotoUpload);
                 btnDownload.addEventListener('click', generatePDF);
 
-                // Загружаем каталог портретов
                 await loadPortraitsCatalog();
-                
-                // Инициализируем первый просмотр
                 handleCategoryChange();
             }
 
-            // Загрузка каталога портретов из JSON
             async function loadPortraitsCatalog() {
                 try {
                     const response = await fetch(PORTRAITS_JSON_URL);
@@ -234,178 +207,188 @@
                         state.portraitsCatalog = await response.json();
                     }
                 } catch (error) {
-                    // Без каталога тоже работает
+                    console.warn('Не удалось загрузить portraits.json:', error);
                 }
             }
 
-            // Обновление имени
             function updateName() {
                 viewName.innerText = inputName.value || "....................";
             }
 
-            // Обработка изменения категории
             function handleCategoryChange() {
                 const religion = selectReligion.value;
                 const rank = selectRank.value;
-                
-                // Обновляем текстовые поля
                 viewReligion.innerText = religion;
                 viewRank.innerText = rank;
-                
-                // Сбрасываем пользовательское фото при смене категории
-                state.customPhoto = null;
-                
-                // Загружаем случайный портрет из новой категории
+                state.customPhotoProcessed = null;
                 selectRandomPortrait();
             }
 
-            // Показать портрет из URL
-            function showPortraitFromUrl(url) {
-                portraitPlaceholder.style.display = 'none';
-                portraitContainer.classList.remove('placeholder-img');
-                portraitContainer.innerHTML = '';
-                
-                const img = new Image();
-                img.className = 'portrait-img';
-                img.src = url;
-                
-                img.onload = () => {
-                    portraitContainer.appendChild(img);
-                };
-                
-                img.onerror = showPlaceholder;
+            // === ОСНОВНАЯ ФУНКЦИЯ: обрезка изображения под 3:4 с cover-логикой ===
+            function processImageForPortrait(imgSrc) {
+                return new Promise((resolve, reject) => {
+                    const img = new Image();
+                    img.crossOrigin = "anonymous";
+                    img.src = imgSrc;
+
+                    img.onload = () => {
+                        const canvas = document.createElement('canvas');
+                        canvas.width = TARGET_WIDTH_PX;
+                        canvas.height = TARGET_HEIGHT_PX;
+                        const ctx = canvas.getContext('2d');
+
+                        // Логика object-fit: cover
+                        const imgRatio = img.width / img.height;
+                        const targetRatio = TARGET_WIDTH_PX / TARGET_HEIGHT_PX;
+
+                        let sx, sy, sWidth, sHeight;
+                        if (imgRatio > targetRatio) {
+                            // Изображение шире → обрезаем по ширине
+                            sHeight = img.height;
+                            sWidth = img.height * targetRatio;
+                            sx = (img.width - sWidth) / 2;
+                            sy = 0;
+                        } else {
+                            // Изображение выше → обрезаем по высоте
+                            sWidth = img.width;
+                            sHeight = img.width / targetRatio;
+                            sx = 0;
+                            sy = (img.height - sHeight) / 2;
+                        }
+
+                        // Чёрный фон на случай прозрачности
+                        ctx.fillStyle = '#000000';
+                        ctx.fillRect(0, 0, TARGET_WIDTH_PX, TARGET_HEIGHT_PX);
+                        ctx.drawImage(img, sx, sy, sWidth, sHeight, 0, 0, TARGET_WIDTH_PX, TARGET_HEIGHT_PX);
+
+                        // Качество JPEG = 1.0 (максимум)
+                        const dataUrl = canvas.toDataURL('image/jpeg', 1.0);
+                        resolve(dataUrl);
+                    };
+
+                    img.onerror = () => reject(new Error('Не удалось загрузить изображение'));
+                });
             }
 
-            // Показать пользовательское фото
-            function showCustomPhoto(dataUrl) {
+            function showProcessedPhoto(dataUrl) {
                 portraitPlaceholder.style.display = 'none';
                 portraitContainer.classList.remove('placeholder-img');
                 portraitContainer.innerHTML = '';
-                
-                const img = new Image();
+
+                const img = document.createElement('img');
                 img.className = 'portrait-img';
                 img.src = dataUrl;
-                
+                img.alt = 'Портрет';
                 portraitContainer.appendChild(img);
             }
 
-            // Показать заглушку
             function showPlaceholder() {
                 portraitContainer.innerHTML = '';
                 portraitContainer.classList.add('placeholder-img');
                 portraitPlaceholder.style.display = 'flex';
             }
 
-            // Выбор случайного портрета из каталога
-            function selectRandomPortrait() {
+            async function selectRandomPortrait() {
                 const religion = selectReligion.value;
                 const rank = selectRank.value;
-                
-                // Сбрасываем пользовательское фото
-                state.customPhoto = null;
-                
-                // Проверяем, есть ли портреты в каталоге
+                state.customPhotoProcessed = null;
+
                 const portraits = state.portraitsCatalog[religion]?.[rank] || [];
-                
                 if (portraits.length === 0) {
                     showPlaceholder();
                     return;
                 }
-                
-                // Получаем последний индекс для этой категории
+
                 const categoryKey = `${religion}_${rank}`;
                 const lastIndex = state.lastRandomIndexes[categoryKey];
-                
                 let randomIndex;
-                
-                // Выбираем случайный индекс, отличный от последнего
                 if (portraits.length > 1 && lastIndex !== undefined) {
                     const availableIndices = portraits.map((_, i) => i).filter(i => i !== lastIndex);
                     randomIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
                 } else {
                     randomIndex = Math.floor(Math.random() * portraits.length);
                 }
-                
-                // Сохраняем индекс
                 state.lastRandomIndexes[categoryKey] = randomIndex;
-                
                 const selectedPortrait = portraits[randomIndex];
-                
-                // Показываем портрет
-                showPortraitFromUrl(selectedPortrait.url);
+
+                try {
+                    const processedUrl = await processImageForPortrait(selectedPortrait.url);
+                    showProcessedPhoto(processedUrl);
+                } catch (e) {
+                    console.error('Ошибка обработки случайного портрета:', e);
+                    showPlaceholder();
+                }
             }
 
-            // Обработка загрузки фото с компьютера
-            function handlePhotoUpload(event) {
+            async function handlePhotoUpload(event) {
                 const file = event.target.files[0];
                 if (!file) return;
-                
-                // Проверяем тип файла
                 if (!file.type.match('image.*')) {
                     alert('Пожалуйста, выберите изображение');
                     return;
                 }
-                
+
                 const reader = new FileReader();
-                
-                reader.onload = (e) => {
-                    state.customPhoto = e.target.result;
-                    showCustomPhoto(state.customPhoto);
+                reader.onload = async (e) => {
+                    try {
+                        const processedDataUrl = await processImageForPortrait(e.target.result);
+                        state.customPhotoProcessed = processedDataUrl;
+                        showProcessedPhoto(processedDataUrl);
+                    } catch (err) {
+                        alert('Не удалось обработать изображение');
+                        console.error(err);
+                    }
                     event.target.value = '';
                 };
-                
                 reader.readAsDataURL(file);
             }
 
-            // Генерация PDF
-            function generatePDF() {
+            async function generatePDF() {
                 const h2p = window.html2pdf;
                 if (!h2p) {
                     alert('Ошибка загрузки библиотеки PDF');
                     return;
                 }
-                
+
                 const name = inputName.value || 'Гражданина';
                 const fileName = `Паспорт_${name.replace(/\s+/g, '_')}.pdf`;
-                
+
                 const originalText = btnDownload.innerHTML;
                 btnDownload.innerHTML = '<span>Генерация...</span>';
                 btnDownload.disabled = true;
-                
-                // Временно убираем поворот для генерации правильного PDF
+
                 const captureArea = document.getElementById('capture-area');
                 const originalTransform = captureArea.style.transform;
                 captureArea.style.transform = 'none';
-                
+
                 const options = {
                     filename: fileName,
-                    html2canvas: { 
-                        scale: 3,
+                    html2canvas: {
+                        scale: 4, // высокое разрешение
                         useCORS: true,
                         logging: false,
                         backgroundColor: '#ffffff',
+                        imageTimeout: 15000,
                         onclone: function(clonedDoc) {
-                            // В клоне также убираем поворот
                             const clonedCaptureArea = clonedDoc.getElementById('capture-area');
                             if (clonedCaptureArea) {
                                 clonedCaptureArea.style.transform = 'none';
                             }
                         }
                     },
-                    jsPDF: { 
-                        unit: 'mm', 
-                        format: 'a4', 
+                    jsPDF: {
+                        unit: 'mm',
+                        format: 'a4',
                         orientation: 'portrait'
                     }
                 };
-                
+
                 h2p().set(options)
                     .from(captureArea)
                     .save()
                     .then(() => {
                         btnDownload.innerHTML = originalText;
                         btnDownload.disabled = false;
-                        // Возвращаем поворот обратно для превью
                         captureArea.style.transform = originalTransform;
                     })
                     .catch(error => {
@@ -413,12 +396,10 @@
                         alert('Ошибка при создании PDF');
                         btnDownload.innerHTML = originalText;
                         btnDownload.disabled = false;
-                        // Возвращаем поворот обратно для превью
                         captureArea.style.transform = originalTransform;
                     });
             }
 
-            // Запуск приложения
             init();
         });
     </script>
