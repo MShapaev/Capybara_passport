@@ -1,11 +1,137 @@
 {
   "Берсерки": {
-    "Гражданин": [],
-    "Дипломат": [],
-    "Генерал": [],
-    "Премьер-министр": [],
-    "Президент": [],
-    "Заключенный": []
+    "Гражданин": [
+      {
+        "filename": "berserker_citizen_1.jpg",
+        "url": "./portraits/berserker/citizen/berserker_citizen_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "berserker_citizen_2.jpg",
+        "url": "./portraits/berserker/citizen/berserker_citizen_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "berserker_citizen_3.jpg",
+        "url": "./portraits/berserker/citizen/berserker_citizen_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "berserker_citizen_4.jpg",
+        "url": "./portraits/berserker/citizen/berserker_citizen_4.jpg",
+        "number": 4
+      }
+    ],
+    "Дипломат": [
+      {
+        "filename": "berserker_diplomat_1.jpg",
+        "url": "./portraits/berserker/diplomat/berserker_diplomat_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "berserker_diplomat_2.jpg",
+        "url": "./portraits/berserker/diplomat/berserker_diplomat_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "berserker_diplomat_3.jpg",
+        "url": "./portraits/berserker/diplomat/berserker_diplomat_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "berserker_diplomat_4.jpg",
+        "url": "./portraits/berserker/diplomat/berserker_diplomat_4.jpg",
+        "number": 4
+      }
+    ],
+    "Генерал": [
+      {
+        "filename": "berserker_general_1.jpg",
+        "url": "./portraits/berserker/general/berserker_general_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "berserker_general_2.jpg",
+        "url": "./portraits/berserker/general/berserker_general_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "berserker_general_3.jpg",
+        "url": "./portraits/berserker/general/berserker_general_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "berserker_general_4.jpg",
+        "url": "./portraits/berserker/general/berserker_general_4.jpg",
+        "number": 4
+      }
+    ],
+    "Премьер-министр": [
+      {
+        "filename": "berserker_pm_1.jpg",
+        "url": "./portraits/berserker/pm/berserker_pm_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "berserker_pm_2.jpg",
+        "url": "./portraits/berserker/pm/berserker_pm_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "berserker_pm_3.jpg",
+        "url": "./portraits/berserker/pm/berserker_pm_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "berserker_pm_4.jpg",
+        "url": "./portraits/berserker/pm/berserker_pm_4.jpg",
+        "number": 4
+      }
+    ],
+    "Президент": [
+      {
+        "filename": "berserker_president_1.jpg",
+        "url": "./portraits/berserker/president/berserker_president_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "berserker_president_2.jpg",
+        "url": "./portraits/berserker/president/berserker_president_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "berserker_president_3.jpg",
+        "url": "./portraits/berserker/president/berserker_president_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "berserker_president_4.jpg",
+        "url": "./portraits/berserker/president/berserker_president_4.jpg",
+        "number": 4
+      }
+    ],
+    "Заключенный": [
+      {
+        "filename": "berserker_prisoner_1.jpg",
+        "url": "./portraits/berserker/prisoner/berserker_prisoner_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "berserker_prisoner_2.jpg",
+        "url": "./portraits/berserker/prisoner/berserker_prisoner_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "berserker_prisoner_3.jpg",
+        "url": "./portraits/berserker/prisoner/berserker_prisoner_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "berserker_prisoner_4.jpg",
+        "url": "./portraits/berserker/prisoner/berserker_prisoner_4.jpg",
+        "number": 4
+      }
+    ]
   },
   "Скебобы": {
     "Гражданин": [
@@ -408,10 +534,94 @@
     "Заключенный": []
   },
   "Мопсы": {
-    "Гражданин": [],
-    "Дипломат": [],
-    "Генерал": [],
-    "Премьер-министр": [],
+    "Гражданин": [
+      {
+        "filename": "pug_citizen_1.jpg",
+        "url": "./portraits/pug/citizen/pug_citizen_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "pug_citizen_2.jpg",
+        "url": "./portraits/pug/citizen/pug_citizen_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "pug_citizen_3.jpg",
+        "url": "./portraits/pug/citizen/pug_citizen_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "pug_citizen_4.jpg",
+        "url": "./portraits/pug/citizen/pug_citizen_4.jpg",
+        "number": 4
+      }
+    ],
+    "Дипломат": [
+      {
+        "filename": "pug_diplomat_1.jpg",
+        "url": "./portraits/pug/diplomat/pug_diplomat_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "pug_diplomat_2.jpg",
+        "url": "./portraits/pug/diplomat/pug_diplomat_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "pug_diplomat_3.jpg",
+        "url": "./portraits/pug/diplomat/pug_diplomat_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "pug_diplomat_4.jpg",
+        "url": "./portraits/pug/diplomat/pug_diplomat_4.jpg",
+        "number": 4
+      }
+    ],
+    "Генерал": [
+      {
+        "filename": "pug_general_1.jpg",
+        "url": "./portraits/pug/general/pug_general_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "pug_general_2.jpg",
+        "url": "./portraits/pug/general/pug_general_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "pug_general_3.jpg",
+        "url": "./portraits/pug/general/pug_general_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "pug_general_4.jpg",
+        "url": "./portraits/pug/general/pug_general_4.jpg",
+        "number": 4
+      }
+    ],
+    "Премьер-министр": [
+      {
+        "filename": "pug_pm_1.jpg",
+        "url": "./portraits/pug/pm/pug_pm_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "pug_pm_2.jpg",
+        "url": "./portraits/pug/pm/pug_pm_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "pug_pm_3.jpg",
+        "url": "./portraits/pug/pm/pug_pm_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "pug_pm_4.jpg",
+        "url": "./portraits/pug/pm/pug_pm_4.jpg",
+        "number": 4
+      }
+    ],
     "Президент": [
       {
         "filename": "pug_president_1.jpg",
@@ -422,9 +632,40 @@
         "filename": "pug_president_2.jpg",
         "url": "./portraits/pug/president/pug_president_2.jpg",
         "number": 2
+      },
+      {
+        "filename": "pug_president_3.jpg",
+        "url": "./portraits/pug/president/pug_president_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "pug_president_4.jpg",
+        "url": "./portraits/pug/president/pug_president_4.jpg",
+        "number": 4
       }
     ],
-    "Заключенный": []
+    "Заключенный": [
+      {
+        "filename": "pug_prisoner_1.jpg",
+        "url": "./portraits/pug/prisoner/pug_prisoner_1.jpg",
+        "number": 1
+      },
+      {
+        "filename": "pug_prisoner_2.jpg",
+        "url": "./portraits/pug/prisoner/pug_prisoner_2.jpg",
+        "number": 2
+      },
+      {
+        "filename": "pug_prisoner_3.jpg",
+        "url": "./portraits/pug/prisoner/pug_prisoner_3.jpg",
+        "number": 3
+      },
+      {
+        "filename": "pug_prisoner_4.jpg",
+        "url": "./portraits/pug/prisoner/pug_prisoner_4.jpg",
+        "number": 4
+      }
+    ]
   },
   "Тапки": {
     "Гражданин": [
